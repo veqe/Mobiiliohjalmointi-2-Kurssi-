@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Days until your given date</title>
+	</head>
+<body>
+<h1>Days until your given date</h1>
+<p>
+${ first } + ${ second } + ${ third } = ${ first + second + third} = ${ forth }
+</p>
+</body>
+</html>
