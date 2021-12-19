@@ -1,5 +1,5 @@
 # Mobiiliohjalmointi-2-Kurssi-
-Harjoitustyö Mobiiliohjelmointi 2 kurssista. Ei sisällä tietokantaa!
+Harjoitustyö Mobiiliohjelmointi 2 kurssista.
 
 embedded-tomcat-template-Harkka ja sen tietokanta on Chinook_Sqlite.sqlite
 
