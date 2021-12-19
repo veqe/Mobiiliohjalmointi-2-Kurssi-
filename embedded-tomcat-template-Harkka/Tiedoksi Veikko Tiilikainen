@@ -1,0 +1,97 @@
+Hyvää päivää tässä toimivuutta varten pari tietoa.
+
+1. ------------------
+embedded-tomcat alla on 
+
+src/main/java 
+
+jonka alla on 
+
+database.java
+
+tiedostossa rivillä 11 on 
+
+private static final String JDBC_URL = "jdbc:sqlite:C:\\sQlite\\Chinook_Sqlite.sqlite";
+
+tyo url pitää vaihtaa teidän Chinook_Sqlite.sqlite tidosto paikkaan, 
+jotta ohjelma voi muodstaa yhteyden teidän tietokantaan.
+
+
+
+
+2. ------------------
+Tärkeimmät ja eniten mukatut tiedostot:
+
+Juureen pom.xml -> muokattu vähän, että kaikki toimii. 
+( Maven ja tomcat liitokset ja riippuvuudet / versiot. )
+
+src/main/java ---> polussa
+
+luotu database kansio ja sinne 3 tiedostoa
+
+database.java -> Täällä tiedostossa on tietokantaan linkitys
+Artistdao.java -> Täällä on tietokanta kyselyt ja lisäykset
+ArtistListItemDao.java -> Tämä on rajapinta
+
+luotu model kansio ja sinne 1 tiedosto
+
+Artist.java -> Tänne tallennetaan aina tietoa väliaikaisesti. Tieto liikkuu tietokantaan ja tietokannasta tätä käyttäen.
+
+luotu servlet kansio ja sinne 1 tiedosto
+
+ArtistListServlet.java -> Tämä on meidän Servlet tiedosto. 
+
+src ---> main ---> webapp ---> polussa
+
+luotu tiedost scripts ja sinne 1 tiedosto
+
+app.js -> Tiedosto oli tarkoitettu Delete komentoa varten, mutta ei ole käytössä.
+
+WEB-INF polkuun luotu ArtistList kansio jossa 1 tiedosto
+
+artistList.jsp -> Täällä on meidän sivun ulkoasu / html koodi. 
+Style käytin aikaisemman esimerkkinne style suoraan linkitettynä.
+
+
+
+
+3. ------------------
+Rupesin tekemään remove nappia ja komentoa sain sen melken valmiiksi ennekuin huomasin ettei sitä tarvita 3 arvosanaan.
+En poistanut remove nappia tai koodia, mutta kommentoin sen pois joka filusta
+ArtistDao.java -> 
+public boolean removeArtist(Artist item) Lopusta kommentoitu pois
+
+ArtistListItemDao.java -> 
+public boolean removeArtist(Artist item); komentoitu pois
+
+ArtistList.jsp -> 
+<script src="/scripts/app.js"></script> ja 
+<button onclick="removeArtist(${ artist.getId() })">Remove</button> kommentoitu pois
+
+ArtistListServlet.java ->
+protected void doDelete tiedoston lopussa kommentoitu pois
+
+app.js ->
+script kommentoitu pois ArtistList.jsp tiedostossa, joten tälle ei tarvinnut tehdä mitään. 
+Jätin vain tiedoston scripts kansioon.
+------------------
+
+
+
+
+Kaikki koodi on tähän harjoitustyöhön koodannut Veikko Tiilikainen.
+Mallia on katsottu koko tämän kurssin edellisten tehtävien koodista.
+Uudelleen käytettävää koodia on myös kopioitu edellisitä tehtävistäni ja muokattu tähän sopivaksi.
+
+Tämän tiedoston palautan zip mukana suoraan Nimellä Tiedoksi Veikko Tiilikainen ja erikseen omana txt tiedostona.
+
+Tavoittelen harjoitustyöstä arvosanaa 3 ja viikko tehtävien arvosanojen keskiarvo melkein 5. 
+Loppuarvosankasi tavoittelen arvosanaa 4.
+
+Tämän tehtävän palautuksen jälkeen menen antamaan opintojaksopalautetta MyNetissä olevan linkin kautta.
+Jos olette lukeneet koko tämän minun Tiedoksi tiedoston sanon vain suoraan.
+Todella isot kiitokset hyvästä kurssista. Tuli osa rakenteesta selkeämmäksi itselleni ja opin kurssin aikana
+paljon uutta Eclipsen toiminnasta ja siihen liittyvästä koodin rakenteesta. Rajapinnat selkeytyivät jonkin verran 
+lisää minulle kanssa. Antaisin 5/5 tälle kurssille.
+
+T: Veikko Tiilikainen
